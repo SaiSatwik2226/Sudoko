@@ -18,14 +18,12 @@ for i,j in enumerate(a):
     for m,n in enumerate(j):
         r = random.randint(1,9)
         s = subarray(i,m,a)
-        print(s,i,m)
-        print(r)
         while True:
             if n == 0:
                 if r not in j:
                     if r not in b[i]:
                         if r not in s:
-                            n = r
+                            a[i][m] = r
                             b[m][i]=r
                             break
                         else:
@@ -34,6 +32,8 @@ for i,j in enumerate(a):
                         r = random.randint(1,9)
                 else:
                     r = random.randint(1,9)
+            else:
+                break
 
         print(a)
 
